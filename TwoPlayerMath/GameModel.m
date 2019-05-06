@@ -21,10 +21,25 @@
 }
 
 - (void)generateRandomQuestion{
+    NSArray* operations = @[@"+", @"-", @"*", @"/"];
+    NSInteger randomOperationIndex = arc4random_uniform(4);
+    NSString* randomOperation = operations[randomOperationIndex];
+    
     NSInteger firstNumber = arc4random_uniform(20) + 1;
     NSInteger secondNumber = arc4random_uniform(20) + 1;
-    self.answer = firstNumber + secondNumber;
-    self.question = [NSString stringWithFormat:@"%ld + %ld ?", (long)firstNumber, (long)secondNumber];
+    
+    if ([randomOperation isEqualToString:@"+"]) {
+         self.answer = firstNumber + secondNumber;
+    } else if ([randomOperation isEqualToString:@"-"]){
+        self.answer = firstNumber - secondNumber;
+    } else if ([randomOperation isEqualToString:@"*"]){
+        self.answer = firstNumber * secondNumber;
+    } else if ([randomOperation isEqualToString:@"/"]){
+        self.answer = firstNumber / secondNumber;
+        NSLog(@"%ld", self.answer);
+    }
+   
+    self.question = [NSString stringWithFormat:@"%ld %@ %ld ?", (long)firstNumber, randomOperation, (long)secondNumber];
     self.currentIndex += 1;
     
 }

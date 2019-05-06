@@ -70,6 +70,11 @@
 - (IBAction)ninePressed:(UIButton *)sender {
     self.userAnswer = [self.userAnswer stringByAppendingString:@"9"];
 }
+
+- (IBAction)minusPressed:(UIButton *)sender {
+    self.userAnswer = [self.userAnswer stringByAppendingString:@"-"];
+}
+
 - (IBAction)enterPressed:(UIButton *)sender {
     if ([self.userAnswer integerValue] != self.myGameModel.answer) {
         [self.myGameModel.currentPlayer losingLife];

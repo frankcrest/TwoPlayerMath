@@ -109,14 +109,21 @@
                                         <rect key="frame" x="0.0" y="300" width="375" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuY-9W-ePd">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="100"/>
                                                 <state key="normal" title="0"/>
                                                 <connections>
                                                     <action selector="zeroPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nh8-ch-GdO"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tp-xJ-NTc">
+                                                <rect key="frame" x="116" y="0.0" width="143" height="100"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="minusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDK-cT-dmW"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcF-mF-NwN">
-                                                <rect key="frame" x="250" y="0.0" width="125" height="100"/>
+                                                <rect key="frame" x="259" y="0.0" width="116" height="100"/>
                                                 <state key="normal" title="Enter"/>
                                                 <connections>
                                                     <action selector="enterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rvx-U1-Qsx"/>
@@ -124,7 +131,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="IuY-9W-ePd" firstAttribute="width" secondItem="PcF-mF-NwN" secondAttribute="width" multiplier="2" id="e7O-IP-sqp"/>
+                                            <constraint firstItem="IuY-9W-ePd" firstAttribute="width" secondItem="PcF-mF-NwN" secondAttribute="width" id="e7O-IP-sqp"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
