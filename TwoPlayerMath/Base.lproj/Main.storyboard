@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 : X + Y?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAR-S6-zPG">
-                                <rect key="frame" x="0.0" y="62" width="375" height="205"/>
+                                <rect key="frame" x="0.0" y="62" width="375" height="175"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -149,6 +149,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI1-nK-nR1">
+                                <rect key="frame" x="0.0" y="237" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yoH-xB-g2d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P1 Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp7-EU-civ">
                                 <rect key="frame" x="116" y="25" width="120" height="20.5"/>
                                 <constraints>
@@ -162,22 +171,26 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qgx-wb-ccL" secondAttribute="trailing" id="5qP-pn-qFe"/>
+                            <constraint firstItem="eI1-nK-nR1" firstAttribute="top" secondItem="LAR-S6-zPG" secondAttribute="bottom" id="8eC-sg-a7H"/>
+                            <constraint firstItem="Qgx-wb-ccL" firstAttribute="top" secondItem="eI1-nK-nR1" secondAttribute="bottom" id="9PA-fh-Dhd"/>
                             <constraint firstItem="cp7-EU-civ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="EDO-4y-DzV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eI1-nK-nR1" secondAttribute="trailing" id="EUl-QU-TgK"/>
                             <constraint firstItem="LAR-S6-zPG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TrK-mh-C3m"/>
                             <constraint firstItem="cp7-EU-civ" firstAttribute="height" secondItem="WRB-6a-J7r" secondAttribute="height" id="VQK-SV-xT8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WRB-6a-J7r" secondAttribute="trailing" constant="11" id="aH7-qf-Xkh"/>
+                            <constraint firstItem="eI1-nK-nR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bFf-6n-WA3"/>
                             <constraint firstItem="LAR-S6-zPG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cc9-IY-iFc"/>
                             <constraint firstItem="WRB-6a-J7r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="gQq-PS-aJe"/>
                             <constraint firstItem="LAR-S6-zPG" firstAttribute="top" secondItem="WRB-6a-J7r" secondAttribute="bottom" constant="16.5" id="kD0-nj-e3P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qgx-wb-ccL" secondAttribute="bottom" id="mqw-Fb-JlK"/>
                             <constraint firstItem="Qgx-wb-ccL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nic-ly-gdS"/>
                             <constraint firstItem="cp7-EU-civ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="rfu-sn-Acr"/>
-                            <constraint firstItem="Qgx-wb-ccL" firstAttribute="top" secondItem="LAR-S6-zPG" secondAttribute="bottom" id="roS-ZW-dAC"/>
                             <constraint firstItem="WRB-6a-J7r" firstAttribute="leading" secondItem="cp7-EU-civ" secondAttribute="trailing" constant="8" id="tRc-HD-IQy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="correctOrIncorrectLabel" destination="eI1-nK-nR1" id="upa-J8-xyD"/>
                         <outlet property="p1ScoreLabel" destination="cp7-EU-civ" id="1DH-aQ-7Hh"/>
                         <outlet property="p2ScoreLabel" destination="WRB-6a-J7r" id="ejJ-c5-4v1"/>
                         <outlet property="questionLabel" destination="LAR-S6-zPG" id="ARS-It-NZm"/>

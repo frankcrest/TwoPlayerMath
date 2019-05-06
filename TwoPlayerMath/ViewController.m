@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (nonatomic, strong) GameModel* myGameModel;
 @property (nonatomic, strong) NSString* userAnswer;
+@property (weak, nonatomic) IBOutlet UILabel *correctOrIncorrectLabel;
 
 @end
 
@@ -77,6 +78,12 @@
 
 - (IBAction)enterPressed:(UIButton *)sender {
     if ([self.userAnswer integerValue] != self.myGameModel.answer) {
+        self.correctOrIncorrectLabel.alpha = 1;
+        self.correctOrIncorrectLabel.textColor = UIColor.redColor;
+        self.correctOrIncorrectLabel.text = @"Incorrect";
+        [UIView animateWithDuration:1.5 animations:^{
+            self.correctOrIncorrectLabel.alpha = 0;
+        }];
         [self.myGameModel.currentPlayer losingLife];
         NSLog(@"%@ got the answer wrong, you have %ld lives left", self.myGameModel.currentPlayer.name
               , self.myGameModel.currentPlayer.numberOfLives);
@@ -88,6 +95,12 @@
 
         }
     } else{
+        self.correctOrIncorrectLabel.alpha = 1;
+        self.correctOrIncorrectLabel.textColor = UIColor.greenColor;
+        self.correctOrIncorrectLabel.text = @"Correct";
+        [UIView animateWithDuration:1.5 animations:^{
+            self.correctOrIncorrectLabel.alpha = 0;
+        }];
         self.myGameModel.currentPlayer.score += 1;
         if ([self.myGameModel.currentPlayer.name isEqualToString:@"Player 1"] ) {
             _p1ScoreLabel.text = [NSString stringWithFormat:@"P1 Score: %ld", (long)self.myGameModel.currentPlayer.score];
