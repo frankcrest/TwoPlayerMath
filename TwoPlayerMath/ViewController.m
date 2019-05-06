@@ -92,7 +92,26 @@
             [self repeatGame];
         } else{
             NSLog(@"%@ has lost the game", self.myGameModel.currentPlayer.name);
-
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Game is over" message:@"Do you want to play again?" preferredStyle: UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
+                
+                self.myGameModel = [[GameModel alloc]init];
+                [self.myGameModel createPlayers];
+                
+                self.p1ScoreLabel.text = @"P1 Score: 0";
+                self.p2ScoreLabel.text = @"P2 Score: 0";
+                
+                self.userAnswer = [[NSString alloc]init];
+                [self.myGameModel generateRandomQuestion];
+                self.questionLabel.text = self.myGameModel.question;
+            }];
+            
+            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:nil];
+            
+            [alert addAction: defaultAction];
+            [alert addAction:cancelAction];
+            [self presentViewController:alert animated:YES completion:nil];
         }
     } else{
         self.correctOrIncorrectLabel.alpha = 1;
