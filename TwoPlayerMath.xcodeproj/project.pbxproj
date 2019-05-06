@@ -13,6 +13,8 @@
 		E999E2E922807DB00070066B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E999E2E822807DB00070066B /* Assets.xcassets */; };
 		E999E2EC22807DB00070066B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E999E2EA22807DB00070066B /* LaunchScreen.storyboard */; };
 		E999E2EF22807DB00070066B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E999E2EE22807DB00070066B /* main.m */; };
+		E999E2F7228081400070066B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = E999E2F6228081400070066B /* Player.m */; };
+		E999E2FA2280814E0070066B /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E999E2F92280814E0070066B /* GameModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		E999E2EB22807DB00070066B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E999E2ED22807DB00070066B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E999E2EE22807DB00070066B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E999E2F5228081400070066B /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		E999E2F6228081400070066B /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		E999E2F82280814E0070066B /* GameModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameModel.h; sourceTree = "<group>"; };
+		E999E2F92280814E0070066B /* GameModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				E999E2E022807DAD0070066B /* AppDelegate.m */,
 				E999E2E222807DAD0070066B /* ViewController.h */,
 				E999E2E322807DAD0070066B /* ViewController.m */,
+				E999E2F5228081400070066B /* Player.h */,
+				E999E2F6228081400070066B /* Player.m */,
+				E999E2F82280814E0070066B /* GameModel.h */,
+				E999E2F92280814E0070066B /* GameModel.m */,
 				E999E2E522807DAD0070066B /* Main.storyboard */,
 				E999E2E822807DB00070066B /* Assets.xcassets */,
 				E999E2EA22807DB00070066B /* LaunchScreen.storyboard */,
@@ -141,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E999E2F7228081400070066B /* Player.m in Sources */,
 				E999E2E422807DAD0070066B /* ViewController.m in Sources */,
+				E999E2FA2280814E0070066B /* GameModel.m in Sources */,
 				E999E2EF22807DB00070066B /* main.m in Sources */,
 				E999E2E122807DAD0070066B /* AppDelegate.m in Sources */,
 			);
