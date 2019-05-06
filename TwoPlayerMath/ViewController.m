@@ -102,9 +102,7 @@
                 self.p1ScoreLabel.text = @"P1 Score: 0";
                 self.p2ScoreLabel.text = @"P2 Score: 0";
                 
-                self.userAnswer = [[NSString alloc]init];
-                [self.myGameModel generateRandomQuestion];
-                self.questionLabel.text = self.myGameModel.question;
+                [self repeatGame];
             }];
             
             UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:nil];
@@ -134,8 +132,8 @@
 
 -(void)repeatGame{
     [self.myGameModel generateRandomQuestion];
-    _questionLabel.text = self.myGameModel.question;
-    _userAnswer = [[NSString alloc]init];
+    self.questionLabel.text = self.myGameModel.question;
+    self.userAnswer = [[NSString alloc]init];
 }
 
 
